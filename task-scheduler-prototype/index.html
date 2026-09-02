@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Scheduler Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">✓</div>
+          <div>
+            <div class="brand-title">Task Scheduler</div>
+            <div class="brand-subtitle">Workspace</div>
+          </div>
+        </div>
+
+        <div class="nav-section-label">WORKSPACE</div>
+        <nav class="nav" id="mainNav">
+          <button class="nav-item active" data-view="dashboard">
+            <span class="nav-icon">▦</span><span>Übersicht</span>
+          </button>
+          <button class="nav-item" data-view="timeline">
+            <span class="nav-icon">□</span><span>Timeline</span>
+          </button>
+          <button class="nav-item" data-view="tasks">
+            <span class="nav-icon">☑</span><span>Alle Tasks</span>
+          </button>
+          <button class="nav-item" data-view="labels">
+            <span class="nav-icon">◇</span><span>Labels</span>
+          </button>
+          <button class="nav-item" data-view="team">
+            <span class="nav-icon">♙</span><span>Team</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar">LB</div>
+        <div class="profile-copy">
+          <strong>Liam Bruno</strong>
+          <span>Benutzerkonto</span>
+        </div>
+        <span class="profile-chevron">⌄</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="topbar-title">Task Scheduler</div>
+          <div class="topbar-date">Mittwoch, 26. August 2026</div>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" title="Benachrichtigungen">♢</button>
+          <button class="user-chip">
+            <span class="avatar small">LB</span>
+            <span>Liam</span>
+            <span class="chevron">⌄</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div id="viewRoot"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="overlayRoot"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
